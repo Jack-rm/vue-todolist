@@ -15,9 +15,16 @@ let root = new Vue (
         data: {
 
             toDoList: [ "pane", "latte", "uova", "formaggio", "insalata", "pomodori", "melanzane", "zucchine", "carciofi", "mele", "pere", "cocomero", "melone", "uva", "vino", "carne", "pesce", "funghi", "fagioli", "ceci"],
+            
         },
 
-        methods: {},
+        methods: {
+
+            deleteListElement: function(element){
+                this.toDoList.splice(element, 1);
+            }
+
+        },
     }
 );
 

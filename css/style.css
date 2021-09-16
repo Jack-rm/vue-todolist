@@ -1,0 +1,11 @@
+ul li {
+    list-style: none;
+}
+
+li i{
+    color: crimson;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -33,12 +33,13 @@
         </div>
     </header>
     <main>
-        <section class="my_list-section">
+        <section class="my_list-section" id="root">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
+                        <input type="text" placeholder=" Nuovo elemento">
                         <ul>
-                            <li> </li>
+                            <li class="fs-4" v-for="(element, index) in toDoList"><i class="far fa-times-circle fs-6" @click="deleteListElement(index)"></i> {{ element }}</li>
                         </ul>
                     </div>
                 </div>
