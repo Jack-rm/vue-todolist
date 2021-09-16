@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="my_list-title">Lista della Spesa:</h1>
+                    <h1 class="my_list-title mt-5 mb-4">Lista della Spesa:</h1>
                 </div>
             </div>
         </div>
@@ -37,7 +37,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <input type="text" placeholder=" Nuovo elemento">
+                        <input class="mb-4 ms-3" type="text" placeholder=" Nuovo elemento" v-model="newToDoElement" @keyup.enter="addListElement">
+                        <button class="btn btn-danger" type="text" @click="addListElement"> Aggiungi </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <ul>
                             <li class="fs-4" v-for="(element, index) in toDoList"><i class="far fa-times-circle fs-6" @click="deleteListElement(index)"></i> {{ element }}</li>
                         </ul>

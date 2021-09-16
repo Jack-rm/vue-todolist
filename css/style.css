@@ -9,3 +9,14 @@ li i{
 body {
     font-family: 'Courier New', Courier, monospace;
 }
+
+.my_list-section input{
+    width: 250px;
+}
+
+.btn-danger:active, 
+.btn-danger:active:focus:not(:disabled):not(.disabled),
+.btn:focus, .btn:active, .btn:hover{
+    box-shadow: none!important;
+    outline: 0;
+}

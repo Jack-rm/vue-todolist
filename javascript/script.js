@@ -15,15 +15,22 @@ let root = new Vue (
         data: {
 
             toDoList: [ "pane", "latte", "uova", "formaggio", "insalata", "pomodori", "melanzane", "zucchine", "carciofi", "mele", "pere", "cocomero", "melone", "uva", "vino", "carne", "pesce", "funghi", "fagioli", "ceci"],
-            
+            newToDoElement: "",
         },
 
         methods: {
 
             deleteListElement: function(element){
                 this.toDoList.splice(element, 1);
-            }
+            },
 
+            addListElement: function(){
+
+                if (this.newToDoElement.trim().length > 0){
+                    this.toDoList.push(this.newToDoElement.trim());
+                    this.newToDoElement = "";
+                }
+            }
         },
     }
 );
